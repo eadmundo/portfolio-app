@@ -2,6 +2,7 @@ import React from 'react';
 import Marty from 'marty';
 import StockControls from './StockControls.react';
 import HoldingsTable from './HoldingsTable.react';
+import DoughnutChart from './DoughnutChart.react';
 
 class Portfolio extends React.Component {
   render() {
@@ -12,6 +13,7 @@ class Portfolio extends React.Component {
           symbolInputValue={this.props.viewState.symbolInputValue}
           quantityInputValue={this.props.viewState.quantityInputValue} />
         <HoldingsTable holdings={this.props.viewState.holdings} />
+        <DoughnutChart holdings={this.props.viewState.holdings} />
       </div>
     )
   }
