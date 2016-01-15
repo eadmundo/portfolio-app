@@ -36,7 +36,7 @@ var server = restify.createServer({
 });
 
 server.use(restify.CORS({
-  origins: [process.env.APP_HOST || 'http://localhost:8001'],
+  origins: [process.env.APP_HOST || 'http://localhost:8080'],
   credentials: true
 }));
 

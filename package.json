@@ -29,11 +29,13 @@
     "sass-loader": "^3.1.2",
     "scss-loader": "0.0.1",
     "style-loader": "^0.13.0",
-    "webpack": "^1.12.9"
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.14.1"
   },
   "scripts": {
-    "start": "webpack --watch & npm run proxy",
+    "start": "webpack --watch & npm run proxy & npm run serve",
     "proxy": "forever -w --watchDirectory ./src/api src/api/server.js",
+    "serve": "webpack-dev-server --content-base build/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
