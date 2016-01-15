@@ -19,6 +19,11 @@ class PortfolioActionCreator extends Marty.ActionCreators {
     debug('changeQuantity', quantity);
     this.dispatch(portfolioConstants.CHANGE_QUANTITY, quantity);
   }
+
+  removeStockFromHoldings(rowNumber) {
+    debug('removeStockFromHoldings', rowNumber);
+    this.dispatch(portfolioConstants.REMOVE_STOCK_FROM_HOLDINGS, rowNumber)
+  }
 }
 
 export default PortfolioActionCreator;

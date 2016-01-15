@@ -9,7 +9,6 @@ function respond(req, res, next) {
             ) + '&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=';
   request(url, function (error, response, body) {
     if (!error && response.statusCode == 200) {
-      console.log(body);
       var body = JSON.parse(body);
       var response = {
         symbol: symbol,

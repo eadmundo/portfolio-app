@@ -15,7 +15,8 @@ class PortfolioStore extends Marty.Store {
       addStockToHoldings: portfolioConstants.ADD_STOCK_TO_HOLDINGS,
       retrieveStock: portfolioConstants.RETRIEVE_STOCK,
       changeSymbol: portfolioConstants.CHANGE_SYMBOL,
-      changeQuantity: portfolioConstants.CHANGE_QUANTITY
+      changeQuantity: portfolioConstants.CHANGE_QUANTITY,
+      removeStockFromHoldings: portfolioConstants.REMOVE_STOCK_FROM_HOLDINGS
     };
   }
 
@@ -58,6 +59,11 @@ class PortfolioStore extends Marty.Store {
       this.state.holdings.push(stock);
       this.hasChanged();
     }
+  }
+
+  removeStockFromHoldings(rowNumber) {
+    this.state.holdings.splice(rowNumber, 1);
+    this.hasChanged();
   }
 }
 

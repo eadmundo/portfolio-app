@@ -11,8 +11,7 @@ class Portfolio extends React.Component {
         <StockControls
           symbolInputValue={this.props.viewState.symbolInputValue}
           quantityInputValue={this.props.viewState.quantityInputValue} />
-        <HoldingsTable
-          holdings={this.props.viewState.holdings} />
+        <HoldingsTable holdings={this.props.viewState.holdings} />
       </div>
     )
   }
