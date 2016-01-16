@@ -1,6 +1,7 @@
 import React from 'react';
 import Marty from 'marty';
 import _ from 'lodash';
+import classname from 'classnames';
 
 class DeleteButton extends React.Component {
 
@@ -12,9 +13,8 @@ class DeleteButton extends React.Component {
 
   render() {
     return (
-      <input
-        type="submit"
-        value="Delete"
+      <span
+        className="glyphicon glyphicon-trash"
         onClick={this.onClick.bind(this)} />
     )
   }
@@ -76,9 +76,17 @@ class HoldingsTable extends React.Component {
     )
   }
 
+  get classNames() {
+    return classname(
+      'table',
+      'table-striped',
+      'table-hover'
+    );
+  }
+
   render() {
     return (
-      <table>
+      <table className={this.classNames}>
         <caption>Holdings</caption>
         <thead>
           <tr>

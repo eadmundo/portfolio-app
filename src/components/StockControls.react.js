@@ -12,9 +12,10 @@ class SymbolInput extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="control form-group">
         <label htmlFor="symbolInput">Symbol:</label>
         <input
+          className="form-control"
           id="symbolInput"
           type="text"
           value={this.props.value}
@@ -40,9 +41,10 @@ class QuantityInput extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="control form-group">
         <label htmlFor="quantityInput">Quantity:</label>
         <input
+          className="form-control"
           id="quantityInput"
           type="number"
           value={this.props.value}
@@ -68,10 +70,9 @@ class AddButton extends React.Component {
 
   render() {
     return (
-      <input
-        type="submit"
-        value="Add"
-        onClick={this.onClick.bind(this)} />
+      <button
+        className="add btn btn-default"
+        onClick={this.onClick.bind(this)}>Add</button>
     )
   }
 }
@@ -81,7 +82,7 @@ Marty.injectApp(AddButton);
 class StockControls extends React.Component {
   render() {
     return (
-      <div>
+      <div className="stock-controls">
         <SymbolInput value={this.props.symbolInputValue} />
         <QuantityInput value={this.props.quantityInputValue} />
         <AddButton />
