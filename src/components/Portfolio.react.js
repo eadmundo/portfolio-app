@@ -24,7 +24,7 @@ class Portfolio extends React.Component {
           <HoldingsTable
             total={this.total}
             holdings={this.props.viewState.holdings} />
-          <div>
+          <div className="chart">
             <h3>Total: ${this.total.toFixed(2)}</h3>
             <DoughnutChart holdings={this.props.viewState.holdings} />
           </div>

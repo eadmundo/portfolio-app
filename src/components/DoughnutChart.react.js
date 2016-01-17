@@ -3,7 +3,10 @@ import ReactDOM from 'react-dom';
 
 const COLOURS = [
   ['#E0E0E0', '#c9c9c9'],
-  ['#99C4D5', '#89b0bf']
+  ['#99C4D5', '#89b0bf'],
+  ['#F7464A', '#FF5A5E'],
+  ['#46BFBD', '#5AD3D1'],
+  ['#FDB45C', '#FFC870']
 ];
 
 class DoughnutChart extends React.Component {
