@@ -1,13 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+const COLOURS = [
+  ['#E0E0E0', '#c9c9c9'],
+  ['#99C4D5', '#89b0bf']
+];
+
 class DoughnutChart extends React.Component {
 
   get data() {
     return this.props.holdings.map((item, i) => {
       let amount = item.quantity * item.price;
+      let colour = COLOURS[i % COLOURS.length];
       return {
         value: amount,
+        color: colour[0],
+        highlight: colour[1],
         label: item.name
       }
     });
@@ -32,8 +40,8 @@ class DoughnutChart extends React.Component {
     return (
       <canvas
         id="holdingsChart"
-        width="400"
-        height="400"></canvas>
+        width="250"
+        height="250"></canvas>
     )
   }
 }

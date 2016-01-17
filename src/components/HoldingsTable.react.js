@@ -59,18 +59,12 @@ class HoldingsTable extends React.Component {
     });
   }
 
-  get total() {
-    return _.sum(this.props.holdings, (holding) => {
-      return holding.quantity * holding.price;
-    });
-  }
-
   get tableBody() {
     return (
       <tbody>
         {this.tableRows}
         <tr>
-          <td colSpan="6">Total: ${this.total.toFixed(2)}</td>
+          <td colSpan="6">Total: ${this.props.total.toFixed(2)}</td>
         </tr>
       </tbody>
     )
